@@ -26,7 +26,7 @@
                         <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
                                 <div class="input-group-append">
-                                    <a href="/karyawan/create">
+                                    <a href="/inventory/create">
                                         <button type="button"
                                             class="btn btn-block btn-outline-primary btn-sm">
                                             INSERT
@@ -42,9 +42,10 @@
                         <thead>
                             <tr>
                             <th style="width: 10px">#</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Jabatan</th>
+                            <th>Name</th>
+                            <th>Inventory Number</th>
+                            <th>Archive</th>
+                            <th>Archive Number</th>
                             <th>Action</th>
                             </tr>
                         </thead>
@@ -52,17 +53,18 @@
                             @foreach($data as $d)
                                 <tr>
                                 <td>#</td>
-                                <td>{{$d->nama}}</td>
-                                <td>{{$d->alamat}}</td>
-                                <td>{{$d->jabatan}}</td>
+                                <td>{{$d->name}}</td>
+                                <td>{{$d->inventory_number}}</td>
+                                <td>{{$d->archive->name}}</td>
+                                <td>{{$d->archive->archive_number}}</td>
                                 <td>
-                                    <a href="/karyawan/edit/{{$d->id}}">
+                                    <a href="/inventory/edit/{{$d->id}}">
                                         <button type="button" class="btn btn-outline-warning btn-sm">
                                             Edit
                                         </button>
                                     </a>
                                         |
-                                    <a href="/karyawan/delete/{{$d->id}}">
+                                    <a href="/inventory/delete/{{$d->id}}">
                                         <button type="button" class="btn btn-outline-danger btn-sm">
                                             Delete
                                         </button>

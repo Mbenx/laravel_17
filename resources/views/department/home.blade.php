@@ -26,7 +26,7 @@
                         <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
                                 <div class="input-group-append">
-                                    <a href="/karyawan/create">
+                                    <a href="/department/create">
                                         <button type="button"
                                             class="btn btn-block btn-outline-primary btn-sm">
                                             INSERT
@@ -43,8 +43,7 @@
                             <tr>
                             <th style="width: 10px">#</th>
                             <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Jabatan</th>
+                            <th>Code</th>
                             <th>Action</th>
                             </tr>
                         </thead>
@@ -52,17 +51,16 @@
                             @foreach($data as $d)
                                 <tr>
                                 <td>#</td>
-                                <td>{{$d->nama}}</td>
-                                <td>{{$d->alamat}}</td>
-                                <td>{{$d->jabatan}}</td>
+                                <td>{{$d->name}}</td>
+                                <td>{{$d->code}}</td>
                                 <td>
-                                    <a href="/karyawan/edit/{{$d->id}}">
+                                    <a href="/department/edit/{{$d->id}}">
                                         <button type="button" class="btn btn-outline-warning btn-sm">
                                             Edit
                                         </button>
                                     </a>
                                         |
-                                    <a href="/karyawan/delete/{{$d->id}}">
+                                    <a href="/department/delete/{{$d->id}}">
                                         <button type="button" class="btn btn-outline-danger btn-sm">
                                             Delete
                                         </button>

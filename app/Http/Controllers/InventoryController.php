@@ -71,7 +71,11 @@ class InventoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $inventory = Inventory::find($id);
+        return view('inventory.show', [
+            'data' => $inventory,
+            'title' => "History Peminjam",
+        ]);
     }
 
     /**

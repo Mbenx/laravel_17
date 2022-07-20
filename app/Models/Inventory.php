@@ -16,4 +16,11 @@ class Inventory extends Model
     {
         return $this->hasOne('App\Models\Archive');
     }
+
+    public function employee()
+    {
+        // return $this->belongsToMany('App\Models\Employee');
+        return $this->belongsToMany('App\Models\Employee')
+        ->withPivot('keterangan','created_at');
+    }
 }

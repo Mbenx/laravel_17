@@ -65,6 +65,7 @@ Route::post('/employee/store', [EmployeeController::class, 'store']);
 Route::get('/employee/edit/{id}', [EmployeeController::class, 'edit']);
 Route::put('/employee/update', [EmployeeController::class, 'update']);
 Route::get('/employee/delete/{id}', [EmployeeController::class, 'destroy']);
+Route::get('/employee/show/{id}', [EmployeeController::class, 'show']);
 
 Route::get('/inventory', [InventoryController::class, 'index']);
 Route::get('/inventory/create', [InventoryController::class, 'create']);
@@ -72,6 +73,7 @@ Route::post('/inventory/store', [InventoryController::class, 'store']);
 Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit']);
 Route::put('/inventory/update', [InventoryController::class, 'update']);
 Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy']);
+Route::get('/inventory/show/{id}', [InventoryController::class, 'show']);
 
 Route::get('/archive', [ArchiveController::class, 'index']);
 

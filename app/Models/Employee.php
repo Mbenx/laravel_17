@@ -15,4 +15,12 @@ class Employee extends Model
     {
         return $this->belongsTo('App\Models\Position');
     }
+
+
+    public function inventory()
+    {
+        // return $this->belongsToMany('App\Models\Inventory');
+        return $this->belongsToMany('App\Models\Inventory')
+        ->withPivot('keterangan','created_at');
+    }
 }

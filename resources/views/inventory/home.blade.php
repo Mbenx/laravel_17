@@ -53,7 +53,11 @@
                             @foreach($data as $d)
                                 <tr>
                                 <td>#</td>
-                                <td>{{$d->name}}</td>
+                                <td>
+                                    <a href="/inventory/show/{{$d->id}}">
+                                        {{$d->name}}
+                                    </a>
+                                </td>
                                 <td>{{$d->inventory_number}}</td>
                                 <td>{{$d->archive->name}}</td>
                                 <td>{{$d->archive->archive_number}}</td>
